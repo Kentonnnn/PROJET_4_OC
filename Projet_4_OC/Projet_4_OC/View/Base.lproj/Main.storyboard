@@ -335,6 +335,39 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="eXa-so-pim" userLabel="Button_Layout">
+                                <rect key="frame" x="48.5" y="555" width="278" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Wm-7D-ZVO" userLabel="Button_Layout_one">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="0Wm-7D-ZVO" secondAttribute="height" multiplier="1:1" id="3bZ-OH-bKI"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="MfJ-SU-imY"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPU-Jg-ek4" userLabel="Button_Layout_two">
+                                        <rect key="frame" x="99" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="KPU-Jg-ek4" secondAttribute="height" multiplier="1:1" id="FyN-aS-A7y"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="qe3-OH-3Ul"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lU4-tp-LzX" userLabel="Button_Layout_three">
+                                        <rect key="frame" x="198" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="lU4-tp-LzX" secondAttribute="height" multiplier="1:1" id="9GY-9j-cgh"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="hhz-6b-nwD"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                    </button>
+                                </subviews>
+                                <variation key="heightClass=compact" axis="vertical"/>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="QpH-ZF-wcy" userLabel="Layout">
                                 <rect key="frame" x="48.5" y="555" width="278" height="80"/>
                                 <subviews>
@@ -366,6 +399,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.69969439509999998" green="0.84599179030000005" blue="0.89933627839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eXa-so-pim" secondAttribute="bottom" constant="32" id="2hF-EW-nKR">
+                                <variation key="heightClass=compact" constant="16"/>
+                            </constraint>
                             <constraint firstItem="M6I-S5-9IY" firstAttribute="top" secondItem="GUk-F1-uAn" secondAttribute="bottom" constant="12" id="3bP-ac-cbw"/>
                             <constraint firstItem="UZe-Li-S1W" firstAttribute="top" secondItem="AJF-J0-IcJ" secondAttribute="bottom" constant="132" id="HMf-V9-6Q5">
                                 <variation key="heightClass=compact" constant="18"/>
@@ -379,6 +415,9 @@
                             </constraint>
                             <constraint firstItem="AJF-J0-IcJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="28" id="j4Y-nZ-zN2">
                                 <variation key="heightClass=compact" constant="11"/>
+                            </constraint>
+                            <constraint firstItem="eXa-so-pim" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jDk-XL-oyP">
+                                <variation key="heightClass=compact" constant="251"/>
                             </constraint>
                             <constraint firstItem="M6I-S5-9IY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pyg-Av-ouT"/>
                             <constraint firstItem="GUk-F1-uAn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rdI-hT-UWx"/>
