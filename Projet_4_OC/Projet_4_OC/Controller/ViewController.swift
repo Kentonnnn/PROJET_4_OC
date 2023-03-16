@@ -10,6 +10,11 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
 
+    @IBOutlet weak var layoutOne: UIStackView!
+    @IBOutlet weak var layoutTwo: UIStackView!
+    @IBOutlet weak var layoutThree: UIStackView!
+    
+    @IBOutlet var layoutGrid: [UIImageView]!
     
     @IBOutlet var viewTap: [UIImageView]!
     
@@ -21,6 +26,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             // Ajouter les gestes TAP aux images
             for imageView in viewTap {
                 tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.myViewTapped(_:)))
+                tapGesture.numberOfTapsRequired = 1
+                tapGesture.numberOfTouchesRequired = 1
+                imageView.addGestureRecognizer(tapGesture)
+                imageView.isUserInteractionEnabled = true
+            }
+            
+            // Ajouter le geste TAP aux grid
+            for imageView in layoutGrid {
+                tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.changeLayout(_:)))
                 tapGesture.numberOfTapsRequired = 1
                 tapGesture.numberOfTouchesRequired = 1
                 imageView.addGestureRecognizer(tapGesture)
@@ -54,5 +68,33 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
             dismiss(animated: true, completion: nil)
         }
+    
+    
+    @objc func changeLayout(_ gestureRecognizer: UITapGestureRecognizer) {
+        
+        let tag = gestureRecognizer.view?.tag
+        
+        switch tag! {
+            
+        case 1:
+            layoutOne.isHidden = false
+            layoutTwo.isHidden = true
+            layoutThree.isHidden = true
+            
+        case 2:
+            layoutTwo.isHidden = false
+            layoutOne.isHidden = true
+            layoutThree.isHidden = true
+            
+        case 3:
+            layoutThree.isHidden = false
+            layoutOne.isHidden = true
+            layoutTwo.isHidden = true
+            
+        default:
+            print("Error")
+        }
     }
+        
+}
 
