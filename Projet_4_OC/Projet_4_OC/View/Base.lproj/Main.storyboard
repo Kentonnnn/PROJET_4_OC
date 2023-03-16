@@ -59,21 +59,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="QpH-ZF-wcy" userLabel="Layout">
                                 <rect key="frame" x="48.5" y="555" width="278" height="80"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Layout 1" translatesAutoresizingMaskIntoConstraints="NO" id="O7V-dx-PZQ" userLabel="Layout_view_one">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" image="Layout 1" translatesAutoresizingMaskIntoConstraints="NO" id="O7V-dx-PZQ" userLabel="Layout_view_one">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="O7V-dx-PZQ" secondAttribute="height" multiplier="1:1" id="jLe-MN-zYV"/>
                                             <constraint firstAttribute="width" constant="80" id="txp-FG-AEW"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Layout 2" translatesAutoresizingMaskIntoConstraints="NO" id="4pu-Uq-TLE" userLabel="Layout_view_two">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" image="Layout 2" translatesAutoresizingMaskIntoConstraints="NO" id="4pu-Uq-TLE" userLabel="Layout_view_two">
                                         <rect key="frame" x="99" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="4pu-Uq-TLE" secondAttribute="height" multiplier="1:1" id="0nD-PH-4ou"/>
                                             <constraint firstAttribute="width" constant="80" id="Y50-ZR-6dj"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Layout 3" translatesAutoresizingMaskIntoConstraints="NO" id="7i6-bZ-6Em" userLabel="Layout_view_three">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" image="Layout 3" translatesAutoresizingMaskIntoConstraints="NO" id="7i6-bZ-6Em" userLabel="Layout_view_three">
                                         <rect key="frame" x="198" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="Te2-KI-SeT"/>
@@ -247,6 +247,9 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="layoutOne" destination="nfO-HI-jxh" id="bH1-Ev-YQt"/>
+                        <outlet property="layoutThree" destination="RWH-Vv-6Vb" id="acu-ls-r0s"/>
+                        <outlet property="layoutTwo" destination="vb6-kk-yfJ" id="97E-3I-ZdC"/>
                         <outletCollection property="viewTap" destination="Iau-4M-aRs" collectionClass="NSMutableArray" id="FKh-8s-esv"/>
                         <outletCollection property="viewTap" destination="Iau-4M-aRs" collectionClass="NSMutableArray" id="SmB-lJ-Tev"/>
                         <outletCollection property="viewTap" destination="Phh-QD-jI6" collectionClass="NSMutableArray" id="uOw-xQ-KXl"/>
@@ -258,6 +261,9 @@
                         <outletCollection property="viewTap" destination="Cp3-NV-Yxq" collectionClass="NSMutableArray" id="RFY-uv-b2D"/>
                         <outletCollection property="viewTap" destination="pLD-m5-9DU" collectionClass="NSMutableArray" id="AHK-p6-ghS"/>
                         <outletCollection property="viewTap" destination="iFT-RK-rau" collectionClass="NSMutableArray" id="J7x-Xv-yn6"/>
+                        <outletCollection property="layoutGrid" destination="O7V-dx-PZQ" collectionClass="NSMutableArray" id="CMk-qR-RDS"/>
+                        <outletCollection property="layoutGrid" destination="4pu-Uq-TLE" collectionClass="NSMutableArray" id="ps7-db-0k4"/>
+                        <outletCollection property="layoutGrid" destination="7i6-bZ-6Em" collectionClass="NSMutableArray" id="9Ir-7L-iuG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
