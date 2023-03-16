@@ -7,44 +7,52 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
 
-
-    @IBOutlet weak var layoutOne: UIStackView!
-    @IBOutlet weak var layoutTwo: UIStackView!
-    @IBOutlet weak var layoutThree: UIStackView!
     
-    @IBOutlet weak var buttonOne: UIButton!
-    @IBOutlet weak var buttonTwo: UIButton!
-    @IBOutlet weak var buttonThree: UIButton!
+    @IBOutlet var viewTap: [UIImageView]!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        buttonOne.setTitle("", for: .normal)
-        buttonTwo.setTitle("", for: .normal)
-        buttonThree.setTitle("", for: .normal)
+    var tapGesture = UITapGestureRecognizer()
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            // Ajouter les gestes TAP aux images
+            for imageView in viewTap {
+                tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.myViewTapped(_:)))
+                tapGesture.numberOfTapsRequired = 1
+                tapGesture.numberOfTouchesRequired = 1
+                imageView.addGestureRecognizer(tapGesture)
+                imageView.isUserInteractionEnabled = true
+            }
+        }
+        
+        @objc func myViewTapped(_ sender: UITapGestureRecognizer) {
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+                
+                let imagePicker = UIImagePickerController()
+                
+                imagePicker.delegate = self
+                imagePicker.sourceType = .photoLibrary
+                imagePicker.allowsEditing = true
+                self.present(imagePicker, animated: true, completion: nil)
+                
+                // Enregistrer la vue qui a été tapée
+                tapGesture = sender
+            }
+        }
+        
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            
+            let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+            
+            // Trouver la vue qui a été tapée
+            if let tappedImageView = (tapGesture.view as? UIImageView) {
+                tappedImageView.image = image
+            }
+            
+            dismiss(animated: true, completion: nil)
+        }
     }
-
-
-    @IBAction func buttonLayoutOne() {
-        layoutOne.isHidden = false
-        layoutTwo.isHidden = true
-        layoutThree.isHidden = true
-    }
-    
-    @IBAction func buttonLayoutTwo() {
-        layoutOne.isHidden = true
-        layoutTwo.isHidden = false
-        layoutThree.isHidden = true
-    }
-    
-    
-    @IBAction func buttonLayoutThree() {
-        layoutOne.isHidden = true
-        layoutTwo.isHidden = true
-        layoutThree.isHidden = false
-    }
-    
-}
 

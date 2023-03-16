@@ -83,48 +83,6 @@
                                 </subviews>
                                 <variation key="heightClass=compact" axis="vertical"/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="eXa-so-pim" userLabel="Button_Layout">
-                                <rect key="frame" x="48.5" y="555" width="278" height="80"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Wm-7D-ZVO" userLabel="Button_Layout_one">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="0Wm-7D-ZVO" secondAttribute="height" multiplier="1:1" id="3bZ-OH-bKI"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="MfJ-SU-imY"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain"/>
-                                        <connections>
-                                            <action selector="buttonLayoutOne" destination="BYZ-38-t0r" eventType="touchUpInside" id="NDx-Ru-FKx"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPU-Jg-ek4" userLabel="Button_Layout_two">
-                                        <rect key="frame" x="99" y="0.0" width="80" height="80"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="KPU-Jg-ek4" secondAttribute="height" multiplier="1:1" id="FyN-aS-A7y"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="qe3-OH-3Ul"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain"/>
-                                        <connections>
-                                            <action selector="buttonLayoutTwo" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ow-93-dti"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lU4-tp-LzX" userLabel="Button_Layout_three">
-                                        <rect key="frame" x="198" y="0.0" width="80" height="80"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="lU4-tp-LzX" secondAttribute="height" multiplier="1:1" id="9GY-9j-cgh"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="hhz-6b-nwD"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain"/>
-                                        <connections>
-                                            <action selector="buttonLayoutThree" destination="BYZ-38-t0r" eventType="touchUpInside" id="4jX-op-RRC"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <variation key="heightClass=compact" axis="vertical"/>
-                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8y9-D0-FeR">
                                 <rect key="frame" x="37" y="184" width="301" height="301"/>
                                 <subviews>
@@ -134,14 +92,14 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="JMQ-wh-g7s">
                                                 <rect key="frame" x="0.0" y="0.0" width="271" height="128"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cp3-NV-Yxq">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cp3-NV-Yxq" customClass="UIImageView">
                                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Cp3-NV-Yxq" secondAttribute="height" multiplier="1:1" id="EHO-Yl-UYd"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pLD-m5-9DU">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pLD-m5-9DU" customClass="UIImageView">
                                                         <rect key="frame" x="143" y="0.0" width="128" height="128"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
@@ -150,7 +108,7 @@
                                                     </view>
                                                 </subviews>
                                             </stackView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFT-RK-rau">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFT-RK-rau" customClass="UIImageView">
                                                 <rect key="frame" x="0.0" y="143" width="271" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -163,7 +121,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nfO-HI-jxh" userLabel="Layout_one">
                                         <rect key="frame" x="15" y="15" width="271" height="271"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6BF-pf-MUb">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6BF-pf-MUb" customClass="UIImageView">
                                                 <rect key="frame" x="0.0" y="0.0" width="271" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -173,14 +131,14 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Jag-lX-oxB">
                                                 <rect key="frame" x="0.0" y="143" width="271" height="128"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NgZ-hB-EbW">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NgZ-hB-EbW" customClass="UIImageView">
                                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="NgZ-hB-EbW" secondAttribute="height" multiplier="1:1" id="EW2-eZ-46h"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHb-xU-EQn">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHb-xU-EQn" customClass="UIImageView">
                                                         <rect key="frame" x="143" y="0.0" width="128" height="128"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
@@ -197,14 +155,14 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ngS-43-9Y0">
                                                 <rect key="frame" x="0.0" y="0.0" width="270" height="127.5"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKl-qa-Oya">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKl-qa-Oya" customClass="UIImageView">
                                                         <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="vKl-qa-Oya" secondAttribute="height" multiplier="1:1" id="U0u-xJ-MDm"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4l-IF-w79">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4l-IF-w79" customClass="UIImageView">
                                                         <rect key="frame" x="142.5" y="0.0" width="127.5" height="127.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
@@ -216,14 +174,14 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Arx-Tc-8wC">
                                                 <rect key="frame" x="0.0" y="142.5" width="270" height="127.5"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Phh-QD-jI6">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Phh-QD-jI6" customClass="UIImageView">
                                                         <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Phh-QD-jI6" secondAttribute="height" multiplier="1:1" id="WX0-9V-YkQ"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iau-4M-aRs">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iau-4M-aRs" customClass="UIImageView">
                                                         <rect key="frame" x="142.5" y="0.0" width="127.5" height="127.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
@@ -253,9 +211,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.69969439509999998" green="0.84599179030000005" blue="0.89933627839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eXa-so-pim" secondAttribute="bottom" constant="32" id="2hF-EW-nKR">
-                                <variation key="heightClass=compact" constant="16"/>
-                            </constraint>
                             <constraint firstItem="M6I-S5-9IY" firstAttribute="top" secondItem="GUk-F1-uAn" secondAttribute="bottom" constant="12" id="3bP-ac-cbw"/>
                             <constraint firstItem="KvH-ac-1AI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OI5-XA-AEQ"/>
                             <constraint firstItem="KvH-ac-1AI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="PYg-aK-2QD"/>
@@ -265,9 +220,6 @@
                             <constraint firstItem="GUk-F1-uAn" firstAttribute="top" secondItem="AJF-J0-IcJ" secondAttribute="bottom" constant="64" id="hJO-mb-Ci2"/>
                             <constraint firstItem="AJF-J0-IcJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="28" id="j4Y-nZ-zN2">
                                 <variation key="heightClass=compact" constant="11"/>
-                            </constraint>
-                            <constraint firstItem="eXa-so-pim" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jDk-XL-oyP">
-                                <variation key="heightClass=compact" constant="251"/>
                             </constraint>
                             <constraint firstItem="8y9-D0-FeR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="jfN-VZ-iNr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8y9-D0-FeR" secondAttribute="bottom" constant="16" id="mb9-gY-nVm"/>
@@ -295,10 +247,17 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="LayoutThree" destination="7i6-bZ-6Em" id="SHH-ll-KAn"/>
-                        <outlet property="buttonOne" destination="0Wm-7D-ZVO" id="d7U-Nv-wKh"/>
-                        <outlet property="buttonThree" destination="lU4-tp-LzX" id="ffO-VG-JaQ"/>
-                        <outlet property="buttonTwo" destination="KPU-Jg-ek4" id="Dws-50-EYa"/>
+                        <outletCollection property="viewTap" destination="Iau-4M-aRs" collectionClass="NSMutableArray" id="FKh-8s-esv"/>
+                        <outletCollection property="viewTap" destination="Iau-4M-aRs" collectionClass="NSMutableArray" id="SmB-lJ-Tev"/>
+                        <outletCollection property="viewTap" destination="Phh-QD-jI6" collectionClass="NSMutableArray" id="uOw-xQ-KXl"/>
+                        <outletCollection property="viewTap" destination="vKl-qa-Oya" collectionClass="NSMutableArray" id="g26-6c-CXb"/>
+                        <outletCollection property="viewTap" destination="m4l-IF-w79" collectionClass="NSMutableArray" id="rug-1V-b3A"/>
+                        <outletCollection property="viewTap" destination="cHb-xU-EQn" collectionClass="NSMutableArray" id="C6a-jM-bkd"/>
+                        <outletCollection property="viewTap" destination="NgZ-hB-EbW" collectionClass="NSMutableArray" id="3nE-Fa-PqW"/>
+                        <outletCollection property="viewTap" destination="6BF-pf-MUb" collectionClass="NSMutableArray" id="KzB-xW-c3g"/>
+                        <outletCollection property="viewTap" destination="Cp3-NV-Yxq" collectionClass="NSMutableArray" id="RFY-uv-b2D"/>
+                        <outletCollection property="viewTap" destination="pLD-m5-9DU" collectionClass="NSMutableArray" id="AHK-p6-ghS"/>
+                        <outletCollection property="viewTap" destination="iFT-RK-rau" collectionClass="NSMutableArray" id="J7x-Xv-yn6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
