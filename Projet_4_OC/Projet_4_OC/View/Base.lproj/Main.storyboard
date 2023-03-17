@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -94,15 +93,37 @@
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cp3-NV-Yxq" customClass="UIImageView">
                                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="Tj6-KC-7yq">
+                                                                <rect key="frame" x="44" y="44" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="Tj6-KC-7yq" secondAttribute="height" multiplier="1:1" id="Y8K-sk-6wD"/>
+                                                                    <constraint firstAttribute="width" constant="40" id="pF2-Y0-bTH"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.94117653369999998" green="0.94117659330000003" blue="0.94117653369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Cp3-NV-Yxq" secondAttribute="height" multiplier="1:1" id="EHO-Yl-UYd"/>
+                                                            <constraint firstItem="Tj6-KC-7yq" firstAttribute="centerY" secondItem="Cp3-NV-Yxq" secondAttribute="centerY" id="eMo-9p-66y"/>
+                                                            <constraint firstItem="Tj6-KC-7yq" firstAttribute="centerX" secondItem="Cp3-NV-Yxq" secondAttribute="centerX" id="zRI-g8-d9i"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pLD-m5-9DU" customClass="UIImageView">
                                                         <rect key="frame" x="143" y="0.0" width="128" height="128"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="HEm-dR-UkZ">
+                                                                <rect key="frame" x="44" y="44" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="HEm-dR-UkZ" secondAttribute="height" multiplier="1:1" id="VQz-wg-5Yk"/>
+                                                                    <constraint firstAttribute="width" constant="40" id="vUg-Er-ulD"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.94117653369999998" green="0.94117659330000003" blue="0.94117653369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
+                                                            <constraint firstItem="HEm-dR-UkZ" firstAttribute="centerY" secondItem="pLD-m5-9DU" secondAttribute="centerY" id="0Sv-hz-cuU"/>
+                                                            <constraint firstItem="HEm-dR-UkZ" firstAttribute="centerX" secondItem="pLD-m5-9DU" secondAttribute="centerX" id="M7C-eE-qUz"/>
                                                             <constraint firstAttribute="width" secondItem="pLD-m5-9DU" secondAttribute="height" multiplier="1:1" id="l1j-11-hcJ"/>
                                                         </constraints>
                                                     </view>
@@ -110,9 +131,20 @@
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFT-RK-rau" customClass="UIImageView">
                                                 <rect key="frame" x="0.0" y="143" width="271" height="128"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="NMU-ke-4PX">
+                                                        <rect key="frame" x="115.5" y="44" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="NMU-ke-4PX" secondAttribute="height" multiplier="1:1" id="1g9-Nl-VDm"/>
+                                                            <constraint firstAttribute="width" constant="40" id="Vj0-ft-Pb4"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.94117653369999998" green="0.94117659330000003" blue="0.94117653369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="iFT-RK-rau" secondAttribute="height" multiplier="271:128" id="Ear-Qr-HBW"/>
+                                                    <constraint firstItem="NMU-ke-4PX" firstAttribute="centerX" secondItem="iFT-RK-rau" secondAttribute="centerX" id="QuK-bH-eXP"/>
+                                                    <constraint firstItem="NMU-ke-4PX" firstAttribute="centerY" secondItem="iFT-RK-rau" secondAttribute="centerY" id="mGD-qE-LeT"/>
                                                     <constraint firstAttribute="width" secondItem="iFT-RK-rau" secondAttribute="height" multiplier="271:128" id="pDU-ME-Z3V"/>
                                                 </constraints>
                                             </view>
@@ -123,8 +155,19 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6BF-pf-MUb" customClass="UIImageView">
                                                 <rect key="frame" x="0.0" y="0.0" width="271" height="128"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="afW-5O-36c">
+                                                        <rect key="frame" x="115.5" y="44" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="afW-5O-36c" secondAttribute="height" multiplier="1:1" id="6Nx-9Z-bGV"/>
+                                                            <constraint firstAttribute="width" constant="40" id="8W0-37-Ex6"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.94117653369999998" green="0.94117659330000003" blue="0.94117653369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
+                                                    <constraint firstItem="afW-5O-36c" firstAttribute="centerY" secondItem="6BF-pf-MUb" secondAttribute="centerY" id="49a-n8-w4L"/>
+                                                    <constraint firstItem="afW-5O-36c" firstAttribute="centerX" secondItem="6BF-pf-MUb" secondAttribute="centerX" id="9fL-S6-532"/>
                                                     <constraint firstAttribute="width" secondItem="6BF-pf-MUb" secondAttribute="height" multiplier="271:128" id="CpN-mf-PCx"/>
                                                 </constraints>
                                             </view>
@@ -133,16 +176,40 @@
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NgZ-hB-EbW" customClass="UIImageView">
                                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="Wbv-uO-CNo">
+                                                                <rect key="frame" x="44" y="44" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="40" id="UVZ-Kp-ssd"/>
+                                                                    <constraint firstAttribute="width" secondItem="Wbv-uO-CNo" secondAttribute="height" multiplier="1:1" id="Wrm-Jp-d0l"/>
+                                                                    <constraint firstAttribute="width" secondItem="Wbv-uO-CNo" secondAttribute="height" multiplier="1:1" id="Zrl-cF-bJ3"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.94117653369999998" green="0.94117659330000003" blue="0.94117653369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="NgZ-hB-EbW" secondAttribute="height" multiplier="1:1" id="EW2-eZ-46h"/>
+                                                            <constraint firstItem="Wbv-uO-CNo" firstAttribute="centerX" secondItem="NgZ-hB-EbW" secondAttribute="centerX" id="hZS-f4-xSg"/>
+                                                            <constraint firstItem="Wbv-uO-CNo" firstAttribute="centerY" secondItem="NgZ-hB-EbW" secondAttribute="centerY" id="tD1-5a-GVG"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHb-xU-EQn" customClass="UIImageView">
                                                         <rect key="frame" x="143" y="0.0" width="128" height="128"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="Ktv-iF-czH">
+                                                                <rect key="frame" x="44" y="44" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="40" id="Bot-7l-7iW"/>
+                                                                    <constraint firstAttribute="width" secondItem="Ktv-iF-czH" secondAttribute="height" multiplier="1:1" id="Pya-N7-z6y"/>
+                                                                    <constraint firstAttribute="width" secondItem="Ktv-iF-czH" secondAttribute="height" multiplier="1:1" id="uOT-qA-sB5"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.94117653369999998" green="0.94117659330000003" blue="0.94117653369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="cHb-xU-EQn" secondAttribute="height" multiplier="1:1" id="0JC-Sl-YX8"/>
+                                                            <constraint firstItem="Ktv-iF-czH" firstAttribute="centerY" secondItem="cHb-xU-EQn" secondAttribute="centerY" id="9Ko-3a-EPO"/>
+                                                            <constraint firstItem="Ktv-iF-czH" firstAttribute="centerX" secondItem="cHb-xU-EQn" secondAttribute="centerX" id="vm0-IT-7Cn"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -157,16 +224,38 @@
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKl-qa-Oya" customClass="UIImageView">
                                                         <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="JdO-wm-KA3">
+                                                                <rect key="frame" x="44" y="44" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="JdO-wm-KA3" secondAttribute="height" multiplier="1:1" id="UzL-ac-fti"/>
+                                                                    <constraint firstAttribute="width" constant="40" id="dOj-W5-0e1"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.94117653369999998" green="0.94117659330000003" blue="0.94117653369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
+                                                            <constraint firstItem="JdO-wm-KA3" firstAttribute="centerY" secondItem="vKl-qa-Oya" secondAttribute="centerY" id="Are-gT-mNc"/>
+                                                            <constraint firstItem="JdO-wm-KA3" firstAttribute="centerX" secondItem="vKl-qa-Oya" secondAttribute="centerX" id="PKb-wd-9iy"/>
                                                             <constraint firstAttribute="width" secondItem="vKl-qa-Oya" secondAttribute="height" multiplier="1:1" id="U0u-xJ-MDm"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4l-IF-w79" customClass="UIImageView">
                                                         <rect key="frame" x="142.5" y="0.0" width="127.5" height="127.5"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="kKx-13-NSJ">
+                                                                <rect key="frame" x="44" y="44" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="40" id="IZX-OB-qte"/>
+                                                                    <constraint firstAttribute="width" secondItem="kKx-13-NSJ" secondAttribute="height" multiplier="1:1" id="cx7-PG-Lpk"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.94117653369999998" green="0.94117659330000003" blue="0.94117653369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="m4l-IF-w79" secondAttribute="height" multiplier="1:1" id="TR4-tB-gbF"/>
+                                                            <constraint firstItem="kKx-13-NSJ" firstAttribute="centerX" secondItem="m4l-IF-w79" secondAttribute="centerX" id="evQ-ij-rj5"/>
+                                                            <constraint firstItem="kKx-13-NSJ" firstAttribute="centerY" secondItem="m4l-IF-w79" secondAttribute="centerY" id="yFA-Q0-KTI"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -176,15 +265,37 @@
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Phh-QD-jI6" customClass="UIImageView">
                                                         <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="IUN-eP-zr4">
+                                                                <rect key="frame" x="44" y="44" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="40" id="j9q-h7-u6r"/>
+                                                                    <constraint firstAttribute="width" secondItem="IUN-eP-zr4" secondAttribute="height" multiplier="1:1" id="ylp-yp-SXV"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.94117653369999998" green="0.94117659330000003" blue="0.94117653369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Phh-QD-jI6" secondAttribute="height" multiplier="1:1" id="WX0-9V-YkQ"/>
+                                                            <constraint firstItem="IUN-eP-zr4" firstAttribute="centerX" secondItem="Phh-QD-jI6" secondAttribute="centerX" id="flA-G2-T5W"/>
+                                                            <constraint firstItem="IUN-eP-zr4" firstAttribute="centerY" secondItem="Phh-QD-jI6" secondAttribute="centerY" id="vWg-Ho-rZa"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iau-4M-aRs" customClass="UIImageView">
                                                         <rect key="frame" x="142.5" y="0.0" width="127.5" height="127.5"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="3Nc-Ku-nCO">
+                                                                <rect key="frame" x="44" y="44" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="3Nc-Ku-nCO" secondAttribute="height" multiplier="1:1" id="K3s-Ol-uP9"/>
+                                                                    <constraint firstAttribute="width" constant="40" id="iDD-xl-NdD"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.94117653369999998" green="0.94117659330000003" blue="0.94117653369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
+                                                            <constraint firstItem="3Nc-Ku-nCO" firstAttribute="centerY" secondItem="Iau-4M-aRs" secondAttribute="centerY" id="BXQ-0i-Qxj"/>
+                                                            <constraint firstItem="3Nc-Ku-nCO" firstAttribute="centerX" secondItem="Iau-4M-aRs" secondAttribute="centerX" id="kT0-ed-hMU"/>
                                                             <constraint firstAttribute="width" secondItem="Iau-4M-aRs" secondAttribute="height" multiplier="1:1" id="mVI-u2-YXv"/>
                                                         </constraints>
                                                     </view>
@@ -278,8 +389,6 @@
         <image name="Layout 1" width="27" height="27"/>
         <image name="Layout 2" width="27" height="27"/>
         <image name="Layout 3" width="27" height="27"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="Plus" width="13.5" height="13.5"/>
     </resources>
 </document>
