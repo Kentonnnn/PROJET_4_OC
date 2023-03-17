@@ -19,6 +19,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var viewTap: [UIImageView]!
     
     var tapGesture = UITapGestureRecognizer()
+    var tappedImageView: UIImageView? = nil
         
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -64,7 +65,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             // Trouver la vue qui a été tapée
             if let tappedImageView = (tapGesture.view as? UIImageView) {
                 tappedImageView.image = image
+                
+                for subview in tappedImageView.subviews {
+                    if subview.tag == 100 {
+                        subview.isHidden = true
+                    }
+                }
             }
+            
             
             dismiss(animated: true, completion: nil)
         }
