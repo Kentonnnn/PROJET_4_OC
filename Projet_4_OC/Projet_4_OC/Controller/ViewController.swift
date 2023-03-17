@@ -60,7 +60,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             
-            let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+            guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+                return
+            }
             
             // Trouver la vue qui a été tapée
             if let tappedImageView = (tapGesture.view as? UIImageView) {
@@ -80,9 +82,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @objc func changeLayout(_ gestureRecognizer: UITapGestureRecognizer) {
         
-        let tag = gestureRecognizer.view?.tag
+        guard let tag = gestureRecognizer.view?.tag else {
+            return
+        }
         
-        switch tag! {
+        switch tag {
             
         case 1:
             layoutOne.isHidden = false
