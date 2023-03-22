@@ -14,6 +14,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var layoutTwo: UIStackView!
     @IBOutlet weak var layoutThree: UIStackView!
     
+    
+    @IBOutlet weak var validationLayoutOne: UIImageView!
+    @IBOutlet weak var validationLayoutTwo: UIImageView!
+    @IBOutlet weak var validationLayoutThree: UIImageView!
+    
+    
+    
     @IBOutlet var layoutGrid: [UIImageView]!
     
     @IBOutlet var viewTap: [UIImageView]!
@@ -92,16 +99,25 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             layoutOne.isHidden = false
             layoutTwo.isHidden = true
             layoutThree.isHidden = true
+            validationLayoutOne.alpha = 1
+            validationLayoutTwo.alpha = 0
+            validationLayoutThree.alpha = 0
             
         case 2:
             layoutTwo.isHidden = false
             layoutOne.isHidden = true
             layoutThree.isHidden = true
+            validationLayoutOne.alpha = 0
+            validationLayoutTwo.alpha = 1
+            validationLayoutThree.alpha = 0
             
         case 3:
             layoutThree.isHidden = false
             layoutOne.isHidden = true
             layoutTwo.isHidden = true
+            validationLayoutOne.alpha = 0
+            validationLayoutTwo.alpha = 0
+            validationLayoutThree.alpha = 1
             
         default:
             print("Error")
