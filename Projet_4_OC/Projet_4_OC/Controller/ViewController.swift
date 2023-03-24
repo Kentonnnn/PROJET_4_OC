@@ -9,7 +9,10 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-
+    @IBOutlet weak var swipeLeftToShare: UIImageView!
+    @IBOutlet weak var swipeUpToShare: UILabel!
+    @IBOutlet weak var squareBlue: UIView!
+    
     @IBOutlet weak var layoutOne: UIStackView!
     @IBOutlet weak var layoutTwo: UIStackView!
     @IBOutlet weak var layoutThree: UIStackView!
@@ -31,6 +34,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         override func viewDidLoad() {
             super.viewDidLoad()
             
+            let swipeGestureRecognizerUp = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture(_:)))
+            swipeGestureRecognizerUp.direction = .up
+            swipeUpToShare.addGestureRecognizer(swipeGestureRecognizerUp)
+            swipeUpToShare.isUserInteractionEnabled = true
+
+            let swipeGestureRecognizerLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture(_:)))
+            swipeGestureRecognizerLeft.direction = .left
+            swipeLeftToShare.addGestureRecognizer(swipeGestureRecognizerLeft)
+            swipeLeftToShare.isUserInteractionEnabled = true
+
+
             // Ajouter les gestes TAP aux images
             for imageView in viewTap {
                 tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.myViewTapped(_:)))
@@ -38,6 +52,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 tapGesture.numberOfTouchesRequired = 1
                 imageView.addGestureRecognizer(tapGesture)
                 imageView.isUserInteractionEnabled = true
+                imageView.contentMode = .scaleAspectFill
+                imageView.clipsToBounds = true
             }
             
             // Ajouter le geste TAP aux grid
@@ -49,6 +65,40 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 imageView.isUserInteractionEnabled = true
             }
         }
+    
+    
+    @objc func handleSwipeGesture(_ sender: UISwipeGestureRecognizer) {
+        var translation: CGAffineTransform
+        
+        switch sender.direction {
+        case .up:
+            translation = CGAffineTransform(translationX: 0, y: -squareBlue.frame.height*2)
+        case .left:
+            translation = CGAffineTransform(translationX: -squareBlue.frame.width*2, y: 0)
+        default:
+            return
+        }
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            self.squareBlue.transform = translation
+        }, completion: { _ in
+            self.presentActivityController()
+        })
+    }
+
+    func presentActivityController() {
+        let activityController = UIActivityViewController(activityItems: [], applicationActivities: nil)
+        present(activityController, animated: true, completion: nil)
+        
+        activityController.completionWithItemsHandler = { activityType, completed, returnedItems, error in
+            UIView.animate(withDuration: 0.5) {
+                self.squareBlue.transform = CGAffineTransform.identity
+            }
+        }
+    }
+
+
+
         
         @objc func myViewTapped(_ sender: UITapGestureRecognizer) {
             if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
@@ -67,7 +117,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             
-            guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+            guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
                 return
             }
             
