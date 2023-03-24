@@ -321,7 +321,7 @@
                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Xe0-no-b0u" userLabel="Layout_validation_grid">
                                 <rect key="frame" x="48.5" y="555" width="278" height="80"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="j8u-fg-vWE" userLabel="Validation_view_one">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="j8u-fg-vWE" userLabel="Validation_view_one">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="j8u-fg-vWE" secondAttribute="height" multiplier="1:1" id="d1b-yC-HgF"/>
@@ -407,6 +407,9 @@
                         <outlet property="layoutOne" destination="nfO-HI-jxh" id="bH1-Ev-YQt"/>
                         <outlet property="layoutThree" destination="RWH-Vv-6Vb" id="acu-ls-r0s"/>
                         <outlet property="layoutTwo" destination="vb6-kk-yfJ" id="97E-3I-ZdC"/>
+                        <outlet property="squareBlue" destination="8y9-D0-FeR" id="h4I-ZX-rxo"/>
+                        <outlet property="swipeLeftToShare" destination="KvH-ac-1AI" id="Ya0-jB-SZu"/>
+                        <outlet property="swipeUpToShare" destination="M6I-S5-9IY" id="6MX-6h-ych"/>
                         <outlet property="validationLayoutOne" destination="j8u-fg-vWE" id="uUO-MC-Gi3"/>
                         <outlet property="validationLayoutThree" destination="KWW-Xa-YWq" id="XOF-8c-Kbf"/>
                         <outlet property="validationLayoutTwo" destination="mts-ud-iPA" id="BFJ-dn-bVr"/>
