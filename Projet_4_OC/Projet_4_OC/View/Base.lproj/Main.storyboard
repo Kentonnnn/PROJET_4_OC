@@ -44,8 +44,8 @@
                                 </constraints>
                                 <variation key="heightClass=compact" hidden="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swip up to share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6I-S5-9IY">
-                                <rect key="frame" x="112.5" y="147" width="150" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6I-S5-9IY">
+                                <rect key="frame" x="107.5" y="147" width="160.5" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="8UN-hH-PqW"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="qay-pl-tve"/>
