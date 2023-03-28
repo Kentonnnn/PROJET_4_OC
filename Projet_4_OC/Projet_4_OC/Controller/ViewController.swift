@@ -81,7 +81,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
 
         func presentActivityController(with image: UIImage) {
-            let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+            let activityController = UIActivityViewController(
+                activityItems: ["Voici mon image", image],
+                applicationActivities: nil)
             present(activityController, animated: true, completion: nil)
 
             activityController.completionWithItemsHandler = { _, _, _, _ in
