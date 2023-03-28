@@ -8,8 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    @IBOutlet weak var swipeLeftToShare: UIImageView!
     @IBOutlet weak var swipeUpToShare: UILabel!
+    @IBOutlet weak var swipeLeftToShare: UILabel!
     @IBOutlet weak var squareBlue: UIView!
     @IBOutlet weak var layoutOne: UIStackView!
     @IBOutlet weak var layoutTwo: UIStackView!

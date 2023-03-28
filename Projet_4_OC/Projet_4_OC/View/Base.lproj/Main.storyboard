@@ -22,10 +22,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Left" translatesAutoresizingMaskIntoConstraints="NO" id="KvH-ac-1AI">
-                                <rect key="frame" x="92" y="327" width="9.5" height="13"/>
+                                <rect key="frame" x="108" y="473" width="9.5" height="13.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="9.5" id="ALQ-rD-Gsi"/>
-                                    <constraint firstAttribute="height" constant="13" id="CfH-ea-yTK"/>
+                                    <constraint firstAttribute="height" constant="13.5" id="498-zC-Lsc"/>
+                                    <constraint firstAttribute="width" constant="9.5" id="p6U-ll-8aA"/>
                                 </constraints>
                                 <variation key="heightClass=compact" hidden="NO"/>
                             </imageView>
@@ -345,21 +345,35 @@
                                 </subviews>
                                 <variation key="heightClass=compact" axis="vertical"/>
                             </stackView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to share" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0H-mx-Opk" userLabel="Swipe left To Share">
+                                <rect key="frame" x="27" y="494" width="171" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="139" id="MOq-FN-No5"/>
+                                    <constraint firstAttribute="height" constant="58" id="aLt-ca-hbU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
+                                <color key="textColor" red="0.94117653369999998" green="0.94117659330000003" blue="0.94117653369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" hidden="NO"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.69969439509999998" green="0.84599179030000005" blue="0.89933627839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="h0H-mx-Opk" secondAttribute="bottom" constant="115" id="3My-m2-bI2"/>
                             <constraint firstItem="M6I-S5-9IY" firstAttribute="top" secondItem="GUk-F1-uAn" secondAttribute="bottom" constant="12" id="3bP-ac-cbw"/>
+                            <constraint firstItem="h0H-mx-Opk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="7Qp-WJ-W0u"/>
                             <constraint firstItem="AJF-J0-IcJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-161" id="7cS-5S-IcV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xe0-no-b0u" secondAttribute="trailing" constant="42" id="ABY-BT-mEs"/>
-                            <constraint firstItem="KvH-ac-1AI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OI5-XA-AEQ"/>
-                            <constraint firstItem="KvH-ac-1AI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="PYg-aK-2QD"/>
+                            <constraint firstItem="h0H-mx-Opk" firstAttribute="centerX" secondItem="KvH-ac-1AI" secondAttribute="centerX" id="P3i-cd-Ded"/>
                             <constraint firstItem="8y9-D0-FeR" firstAttribute="top" secondItem="AJF-J0-IcJ" secondAttribute="bottom" constant="126" id="VPf-Bg-FPx">
                                 <variation key="heightClass=compact" constant="18"/>
                             </constraint>
+                            <constraint firstItem="8y9-D0-FeR" firstAttribute="leading" secondItem="h0H-mx-Opk" secondAttribute="trailing" constant="17.5" id="fhh-i2-nSI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xe0-no-b0u" secondAttribute="bottom" constant="32" id="fkq-xs-c9v">
                                 <variation key="heightClass=compact" constant="16"/>
                             </constraint>
+                            <constraint firstItem="h0H-mx-Opk" firstAttribute="top" secondItem="KvH-ac-1AI" secondAttribute="bottom" constant="7.5" id="gCN-HJ-DYr"/>
                             <constraint firstItem="GUk-F1-uAn" firstAttribute="top" secondItem="AJF-J0-IcJ" secondAttribute="bottom" constant="64" id="hJO-mb-Ci2"/>
                             <constraint firstItem="AJF-J0-IcJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="28" id="j4Y-nZ-zN2"/>
                             <constraint firstItem="8y9-D0-FeR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="jfN-VZ-iNr"/>
@@ -387,6 +401,7 @@
                                 <exclude reference="qr9-Np-pd1"/>
                                 <exclude reference="7cS-5S-IcV"/>
                                 <exclude reference="x7W-im-Psk"/>
+                                <exclude reference="fhh-i2-nSI"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -397,6 +412,7 @@
                                 <exclude reference="7cS-5S-IcV"/>
                                 <exclude reference="j4Y-nZ-zN2"/>
                                 <include reference="x7W-im-Psk"/>
+                                <include reference="fhh-i2-nSI"/>
                                 <exclude reference="jfN-VZ-iNr"/>
                                 <exclude reference="rfP-VI-Uc3"/>
                                 <exclude reference="ur0-xL-ZXs"/>
@@ -408,8 +424,8 @@
                         <outlet property="layoutThree" destination="RWH-Vv-6Vb" id="acu-ls-r0s"/>
                         <outlet property="layoutTwo" destination="vb6-kk-yfJ" id="97E-3I-ZdC"/>
                         <outlet property="squareBlue" destination="8y9-D0-FeR" id="h4I-ZX-rxo"/>
-                        <outlet property="swipeLeftToShare" destination="KvH-ac-1AI" id="Ya0-jB-SZu"/>
-                        <outlet property="swipeUpToShare" destination="M6I-S5-9IY" id="6MX-6h-ych"/>
+                        <outlet property="swipeLeftToShare" destination="h0H-mx-Opk" id="wLO-x8-lhN"/>
+                        <outlet property="swipeUpToShare" destination="M6I-S5-9IY" id="t49-Uu-cQe"/>
                         <outlet property="validationLayoutOne" destination="j8u-fg-vWE" id="uUO-MC-Gi3"/>
                         <outlet property="validationLayoutThree" destination="KWW-Xa-YWq" id="XOF-8c-Kbf"/>
                         <outlet property="validationLayoutTwo" destination="mts-ud-iPA" id="BFJ-dn-bVr"/>
@@ -431,7 +447,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31.199999999999999" y="-31.934032983508249"/>
+            <point key="canvasLocation" x="31.03448275862069" y="-32.799999999999997"/>
         </scene>
     </scenes>
     <resources>
