@@ -113,11 +113,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 // Trouver la vue qui a été tapée
                 if let tappedImageView = (tapGesture.view as? UIImageView) {
                     tappedImageView.image = image
-                    for subview in tappedImageView.subviews {
-                        if subview.tag == 100 {
+                    for subview in tappedImageView.subviews where subview.tag == 100 {
                             subview.isHidden = true
                         }
-                    }
                 }
                 dismiss(animated: true, completion: nil)
             }
