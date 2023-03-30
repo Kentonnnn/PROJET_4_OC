@@ -112,10 +112,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD9510D929B0BDED005373CB /* Build configuration list for PBXNativeTarget "Projet_4_OC" */;
 			buildPhases = (
+				CDEABBE929D2DD8300FBE869 /* SwiftLint */,
 				CD9510C129B0BDEC005373CB /* Sources */,
 				CD9510C229B0BDEC005373CB /* Frameworks */,
 				CD9510C329B0BDEC005373CB /* Resources */,
-				CDEABBE929D2DD8300FBE869 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -177,6 +177,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		CDEABBE929D2DD8300FBE869 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);

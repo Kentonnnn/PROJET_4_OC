@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     @IBOutlet weak var swipeUpToShare: UILabel!
     @IBOutlet weak var swipeLeftToShare: UILabel!
     @IBOutlet weak var squareBlue: UIView!
@@ -19,6 +20,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var validationLayoutThree: UIImageView!
     @IBOutlet var layoutGrid: [UIImageView]!
     @IBOutlet var viewTap: [UIImageView]!
+    
     var tapGesture = UITapGestureRecognizer()
     var tappedImageView: UIImageView?
     override func viewDidLoad() {
@@ -82,7 +84,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
         func presentActivityController(with image: UIImage) {
             let activityController = UIActivityViewController(
-                activityItems: ["Voici mon image", image],
+                activityItems: [image],
                 applicationActivities: nil)
             present(activityController, animated: true, completion: nil)
 
