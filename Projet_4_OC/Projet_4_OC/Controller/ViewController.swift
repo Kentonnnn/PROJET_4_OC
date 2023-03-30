@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var swipeUpToShare: UILabel!
@@ -90,6 +89,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 activityItems: [image],
                 applicationActivities: nil)
             present(activityController, animated: true, completion: nil)
+
+            activityController.completionWithItemsHandler = { _, _, _, _ in
+                UIView.animate(withDuration: 0.5) {
+                    self.squareBlue.transform = CGAffineTransform.identity
+                }
+            }
+        }
 
         @objc func myViewTapped(_ sender: UITapGestureRecognizer) {
             if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
