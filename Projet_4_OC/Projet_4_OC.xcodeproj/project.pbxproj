@@ -8,19 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		CD9510C929B0BDEC005373CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9510C829B0BDEC005373CB /* AppDelegate.swift */; };
-		CD9510CB29B0BDEC005373CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9510CA29B0BDEC005373CB /* SceneDelegate.swift */; };
 		CD9510CD29B0BDEC005373CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9510CC29B0BDEC005373CB /* ViewController.swift */; };
 		CD9510D029B0BDEC005373CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9510CE29B0BDEC005373CB /* Main.storyboard */; };
 		CD9510D229B0BDED005373CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD9510D129B0BDED005373CB /* Assets.xcassets */; };
 		CD9510D529B0BDED005373CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9510D329B0BDED005373CB /* LaunchScreen.storyboard */; };
 		CD9510E229B0C122005373CB /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD9510E029B0C121005373CB /* Delm-Medium.otf */; };
 		CD9510E329B0C122005373CB /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD9510E129B0C121005373CB /* ThirstySoftRegular.otf */; };
+		FD545B789FD506629959577F /* Pods_Projet_4_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF33460FD5B0DC9665B2A894 /* Pods_Projet_4_OC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4BA96C0579E7FE094B13AEEC /* Pods-Projet_4_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Projet_4_OC.release.xcconfig"; path = "Target Support Files/Pods-Projet_4_OC/Pods-Projet_4_OC.release.xcconfig"; sourceTree = "<group>"; };
+		AA4EDBE800AEE4D89CA63112 /* Pods-Projet_4_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Projet_4_OC.debug.xcconfig"; path = "Target Support Files/Pods-Projet_4_OC/Pods-Projet_4_OC.debug.xcconfig"; sourceTree = "<group>"; };
 		CD9510C529B0BDEC005373CB /* Projet_4_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Projet_4_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9510C829B0BDEC005373CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD9510CA29B0BDEC005373CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CD9510CC29B0BDEC005373CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CD9510CF29B0BDEC005373CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD9510D129B0BDED005373CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,6 +29,7 @@
 		CD9510D629B0BDED005373CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Projet_4_OC/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		CD9510E029B0C121005373CB /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 		CD9510E129B0C121005373CB /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
+		CF33460FD5B0DC9665B2A894 /* Pods_Projet_4_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Projet_4_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD545B789FD506629959577F /* Pods_Projet_4_OC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9BDD07E3E68E2CD945D16BBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF33460FD5B0DC9665B2A894 /* Pods_Projet_4_OC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CD9510BC29B0BDEC005373CB = {
 			isa = PBXGroup;
 			children = (
 				CD9510C729B0BDEC005373CB /* Projet_4_OC */,
 				CD9510C629B0BDEC005373CB /* Products */,
+				F86CC071A2B02EFDD9B6CED6 /* Pods */,
+				9BDD07E3E68E2CD945D16BBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +111,19 @@
 				CD9510D129B0BDED005373CB /* Assets.xcassets */,
 				CD9510D629B0BDED005373CB /* Info.plist */,
 				CD9510D329B0BDED005373CB /* LaunchScreen.storyboard */,
-				CD9510CA29B0BDEC005373CB /* SceneDelegate.swift */,
 				CD9510E029B0C121005373CB /* Delm-Medium.otf */,
 				CD9510E129B0C121005373CB /* ThirstySoftRegular.otf */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F86CC071A2B02EFDD9B6CED6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA4EDBE800AEE4D89CA63112 /* Pods-Projet_4_OC.debug.xcconfig */,
+				4BA96C0579E7FE094B13AEEC /* Pods-Projet_4_OC.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +133,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD9510D929B0BDED005373CB /* Build configuration list for PBXNativeTarget "Projet_4_OC" */;
 			buildPhases = (
+				290EC8D7271B992B9684A875 /* [CP] Check Pods Manifest.lock */,
+				CDEABBE929D2DD8300FBE869 /* SwiftLint */,
 				CD9510C129B0BDEC005373CB /* Sources */,
 				CD9510C229B0BDEC005373CB /* Frameworks */,
 				CD9510C329B0BDEC005373CB /* Resources */,
@@ -173,6 +196,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		290EC8D7271B992B9684A875 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Projet_4_OC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDEABBE929D2DD8300FBE869 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CD9510C129B0BDEC005373CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -180,7 +247,6 @@
 			files = (
 				CD9510CD29B0BDEC005373CB /* ViewController.swift in Sources */,
 				CD9510C929B0BDEC005373CB /* AppDelegate.swift in Sources */,
-				CD9510CB29B0BDEC005373CB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +388,7 @@
 		};
 		CD9510DA29B0BDED005373CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA4EDBE800AEE4D89CA63112 /* Pods-Projet_4_OC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -350,6 +417,7 @@
 		};
 		CD9510DB29B0BDED005373CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BA96C0579E7FE094B13AEEC /* Pods-Projet_4_OC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
