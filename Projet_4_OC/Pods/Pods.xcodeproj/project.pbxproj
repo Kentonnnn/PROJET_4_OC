@@ -40,7 +40,7 @@
 		3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
 		41459469881FCE8CB5EFF55A83C99AD7 /* Pods-Projet_4_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Projet_4_OC.debug.xcconfig"; sourceTree = "<group>"; };
 		440455B668160B5D0D780E2CE45E6660 /* Pods-Projet_4_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Projet_4_OC.release.xcconfig"; sourceTree = "<group>"; };
-		4B47781ED2DCEF457690D93399316AF8 /* Pods_Projet_4_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Projet_4_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B47781ED2DCEF457690D93399316AF8 /* Pods-Projet_4_OC */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Projet_4_OC"; path = Pods_Projet_4_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5004E079587E8E88BA43844A65B87379 /* Pods-Projet_4_OC-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Projet_4_OC-acknowledgements.plist"; sourceTree = "<group>"; };
 		6B2C8C2D3A70B43B5BC3C50CF351A1B1 /* Pods-Projet_4_OC-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Projet_4_OC-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6F4DCF17E469786D501A438320687D9A /* Pods-Projet_4_OC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Projet_4_OC-dummy.m"; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		64C8A4E29554C3A2F6EAE508BC9DCF5E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4B47781ED2DCEF457690D93399316AF8 /* Pods_Projet_4_OC.framework */,
+				4B47781ED2DCEF457690D93399316AF8 /* Pods-Projet_4_OC */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,7 +178,7 @@
 			);
 			name = "Pods-Projet_4_OC";
 			productName = Pods_Projet_4_OC;
-			productReference = 4B47781ED2DCEF457690D93399316AF8 /* Pods_Projet_4_OC.framework */;
+			productReference = 4B47781ED2DCEF457690D93399316AF8 /* Pods-Projet_4_OC */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
