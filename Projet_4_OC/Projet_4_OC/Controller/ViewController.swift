@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+
     @IBOutlet weak var swipeUpToShare: UILabel!
     @IBOutlet weak var swipeLeftToShare: UILabel!
     @IBOutlet weak var squareBlue: UIView!
@@ -20,9 +20,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var validationLayoutThree: UIImageView!
     @IBOutlet var layoutGrid: [UIImageView]!
     @IBOutlet var viewTap: [UIImageView]!
-    
+
     var tapGesture = UITapGestureRecognizer()
     var tappedImageView: UIImageView?
+
     override func viewDidLoad() {
                 super.viewDidLoad()
                 let swipeGestureRecognizerUp = UISwipeGestureRecognizer(
@@ -62,6 +63,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     imageView.isUserInteractionEnabled = true
                 }
             }
+
         @objc func handleSwipeGesture(_ sender: UISwipeGestureRecognizer) {
             var translation: CGAffineTransform
             switch sender.direction {
@@ -95,32 +97,34 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
 
-            @objc func myViewTapped(_ sender: UITapGestureRecognizer) {
-                if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-                    let imagePicker = UIImagePickerController()
-                    imagePicker.delegate = self
-                    imagePicker.sourceType = .photoLibrary
-                    imagePicker.allowsEditing = true
-                    self.present(imagePicker, animated: true, completion: nil)
-                    // Enregistrer la vue qui a été tapée
-                    tapGesture = sender
-                }
+        @objc func myViewTapped(_ sender: UITapGestureRecognizer) {
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+                let imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
+                imagePicker.sourceType = .photoLibrary
+                imagePicker.allowsEditing = true
+                self.present(imagePicker, animated: true, completion: nil)
+                // Enregistrer la vue qui a été tapée
+                tapGesture = sender
             }
-            func imagePickerController(
-                _ picker: UIImagePickerController,
-                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-                guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
-                    return
-                }
-                // Trouver la vue qui a été tapée
-                if let tappedImageView = (tapGesture.view as? UIImageView) {
-                    tappedImageView.image = image
-                    for subview in tappedImageView.subviews where subview.tag == 100 {
-                            subview.isHidden = true
-                        }
-                }
-                dismiss(animated: true, completion: nil)
+        }
+
+        func imagePickerController(
+            _ picker: UIImagePickerController,
+            didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+            guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
+                return
             }
+            // Trouver la vue qui a été tapée
+            if let tappedImageView = (tapGesture.view as? UIImageView) {
+                tappedImageView.image = image
+                for subview in tappedImageView.subviews where subview.tag == 100 {
+                        subview.isHidden = true
+                    }
+            }
+            dismiss(animated: true, completion: nil)
+        }
+
         @objc func changeLayout(_ gestureRecognizer: UITapGestureRecognizer) {
             guard let tag = gestureRecognizer.view?.tag else {
                 return
@@ -153,15 +157,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
 
-    extension UIView {
-        func imageFromView() -> UIImage? {
-            UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, 0.0)
-            defer { UIGraphicsEndImageContext() }
-            if let context = UIGraphicsGetCurrentContext() {
-                self.layer.render(in: context)
-                let image = UIGraphicsGetImageFromCurrentImageContext()
-                return image
-            }
-            return nil
+extension UIView {
+    func imageFromView() -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, 0.0)
+        defer { UIGraphicsEndImageContext() }
+        if let context = UIGraphicsGetCurrentContext() {
+            self.layer.render(in: context)
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            return image
         }
+        return nil
     }
+}
