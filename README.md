@@ -57,6 +57,7 @@ After sharing, canceling, or encountering an error, the main grid returns to its
 
 # Aperçu
 
-![Capture d’écran 2023-11-05 à 11 48 25 PM](https://github.com/Kentonnnn/PROJET_4_OC/assets/102812289/5b58eddc-8a3d-44d7-8be8-73421413a9dd)
-![Capture d’écran 2023-11-05 à 11 48 12 PM](https://github.com/Kentonnnn/PROJET_4_OC/assets/102812289/12329e8d-0177-41fb-9654-dff435cfaaba)
-![Capture d’écran 2023-11-05 à 11 47 59 PM](https://github.com/Kentonnnn/PROJET_4_OC/assets/102812289/3d395f47-0b94-4c2c-9eee-fcc205084c3f)
+![Capture d’écran 2023-11-05 à 11 48 25 PM](https://github.com/Kentonnnn/PROJET_4_OC/assets/102812289/3bb675bb-92e3-4af6-a507-43341d36bf28)
+![Capture d’écran 2023-11-05 à 11 48 12 PM](https://github.com/Kentonnnn/PROJET_4_OC/assets/102812289/ff6d7b6d-76a0-46f7-b10e-812fa5691754)
+![Capture d’écran 2023-11-05 à 11 47 59 PM](https://github.com/Kentonnnn/PROJET_4_OC/assets/102812289/1fbee8d1-b31c-4766-b23c-3d7fdf27d266)
+
